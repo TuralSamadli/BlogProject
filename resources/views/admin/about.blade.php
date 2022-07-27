@@ -1,82 +1,73 @@
 @extends('admin.layouts.master')
-
 @section('content')
     <div class="page-wrapper">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h4 class="card-title">User Information Table </h4>
-                        </div>
-                        <div style="text-align: right" class="col-md-6"><a
-                                href=class="btn waves-effect waves-light btn-success">Add User</a></div>
+        <div class="col-sm-12">
+            <div class="card card-body">
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
                     </div>
-                    <div class="table-responsive">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Image</th>
-                                    <th>Phone Number</th>
-                                    <th>Email Adress</th>
-                                    <th>Adress</th>
-                                    <th>Facebook</th>
-                                    <th>Linkedin Account</th>
-                                    <th>Github</th>
-                                    <th>Instagram</th>
-                                    <th>birthday</th>
-                                    <th>city</th>
-                                    <th>Website</th>
-                                    <th>Cv</th>
-                                    <th>Interests</th>
-                                    <th>Degree</th>
-                                    <th>Description</th>
-                                    <th>Edite</th>
-                                    <th>Delete</th>
+                @endif
+                <h1>User Edit Page</h1>
+                <form method="POST" action="{{ route('about') }}" class="form-horizontal mt-4">
+                    @csrf
+                    @foreach ($users as $user)
+                        
+                    <input type="hidden" value="{{ $user->id}}" name="id_category">
 
-
-
-
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($users as $user)
-                                    {{-- {{-- <tr> --}}
-                                    {{-- <td>{{ $loop->iteration }}</td> --}}
-                                    {{-- <td><img src="{{ $product_details->image}}" /></td> --}}
-                                    <td>{{ $user->image }}</td>
-                                    <td>{{ $user->phone }}</td>
-                                    <td>{{ $user->email }}</td>
-                                    <td>{{ $user->address }}</td>
-                                    <td>{{ $user->facebook }}</td>
-                                    <td>{{ $user->linkedin }}</td>
-                                    <td>{{ $user->github }}</td>
-                                    <td>{{ $user->Instagram }}</td>
-                                    <td>{{ $user->birthday }}</td>
-                                    <td>{{ $user->city }}</td>
-                                    <td>{{ $user->website }}</td>
-                                    <td>{{ $user->cv }}</td>
-                                    <td>{{ $user->interests }}</td>
-                                    <td>{{ $user->degree }}</td>
-                                    <td>{{ $user->description }}</td>
-
-
-
-
-                                    <td> <button type="button"
-                                            class="btn waves-effect waves-light btn-warning">Edit</button></td>
-                                    <td> <button type="button"
-                                            class="btn waves-effect waves-light btn-danger">Delete</button></td>
-                                    </tr>
-                                @endforeach
-
-                            </tbody>
-                        </table>
-
+                    <div class="form-group" style="width: 50%">
+                        <label>Phone Number</label>
+                        <input value="{{ $user->phone }}" type="text" class="form-control" name="phonenumber">
                     </div>
-                </div>
+                    <div class="form-group" style="width: 50%">
+                        <label>Email</label>
+                        <input value="{{ $user->address }}" type="text" class="form-control" name="category_name">
+                    </div>
+                    <div class="form-group" style="width: 50%">
+                        <label>Address</label>
+                        <input value="{{ $user->address }}" type="text" class="form-control" name="category_name">
+                    </div>
+                    <div class="form-group" style="width: 50%">
+                        <label>Facebook</label>
+                        <input value="{{ $user->facebook }}" type="text" class="form-control" name="category_name">
+                    </div>
+                    <div class="form-group" style="width: 50%">
+                        <label>Linkedin</label>
+                        <input value="{{ $user->linkedin }}" type="text" class="form-control" name="category_name">
+                    </div>
+                    <div class="form-group" style="width: 50%">
+                        <label>Github</label>
+                        <input value="{{ $user->github }}" type="text" class="form-control" name="category_name">
+                    </div>
+                    <div class="form-group" style="width: 50%">
+                        <label>Instagram</label>
+                        <input value="{{ $user->instagram }}" type="text" class="form-control" name="category_name">
+                    </div>
+
+                    <div class="form-group" style="width: 50%">
+                        <label>name</label>
+                        <input value="{{ $user->address }}" type="text" class="form-control" name="category_name">
+                    </div>
+                    <div class="form-group" style="width: 50%">
+                        <label>name</label>
+                        <input value="{{ $user->address }}" type="text" class="form-control" name="category_name">
+                    </div>
+                    <div class="form-group" style="width: 50%">
+                        <label>name</label>
+                        <input value="{{ $user->address }}" type="text" class="form-control" name="category_name">
+                    </div>
+                    
+                    <div class="button-group" style="margin-left: 450px; padding-top: 20px">
+                        <button type="submit" class="btn waves-effect waves-light btn-success">Edit Category</button>
+                    </div>
+                    @endforeach
+
+                </form>
             </div>
         </div>
-
     </div>
 @endsection

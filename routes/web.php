@@ -19,6 +19,9 @@ use App\Http\Controllers\AdminController;
 // });
 Route::get('/',[HomePageContoller::class,'index'])->name('home');
 Route::get('/control',  [AdminController::class,'return'])->name('new');
-   Route::get('/control/about',[AdminController::class,'about'])->name('about');
+   Route::post('/control/about',[AdminController::class,'about'])->name('about');
    Route::get('/control/message',[AdminController::class,'message'])->name('message');
+   Route::post('/control/contact',[AdminController::class,'info'])->name('contact');
+   Route::get('/control/contact',[AdminController::class,'contact'])->name('contact.index');
+   Route::get('/control/about',[AdminController::class,'index'])->name('about.index');
 

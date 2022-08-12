@@ -32,7 +32,7 @@
         <nav class="sidebar-nav">
             <ul id="sidebarnav">
                 <li>
-                    <a class="waves-effect waves-dark" href="{{ route('about') }}" aria-expanded="false">
+                    <a class="waves-effect waves-dark" href="{{ route('user') }}" aria-expanded="false">
                         <i class="far fa-circle text-danger"></i>
                         <span class="hide-menu">User Information</span>
                     </a>
@@ -44,6 +44,12 @@
                     </a>
                 </li>
 
+                <li>
+                    <a class="waves-effect waves-dark" href="{{ route('info') }}" aria-expanded="false">
+                        <i class="far fa-circle text-danger"></i>
+                        <span class="hide-menu">User General</span>
+                    </a>
+                </li>
 
                 <li>
                     <a class="waves-effect waves-dark" href="pages-login.html" aria-expanded="false">

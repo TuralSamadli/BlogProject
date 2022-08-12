@@ -609,7 +609,7 @@ dd											<p>
 										<div class="controls">
 											<div class="row">
 												<div class="col-md-6">
-													{{-- <form id="contact-form" method="POST" action="{{ route('user_messages') }}"> --}}
+													<form id="contact-form" method="POST" action="{{ route('user_messages') }}">
 													<div class="form-group">
 													<input id="name" type="text" name="name" class="form-control" placeholder="Name*" required="required" data-error="Name is required.">
 														<div class="help-block with-errors"></div>

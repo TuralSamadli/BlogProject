@@ -14,7 +14,7 @@
                 </div>
             @endif
             <h1>User Edit Page</h1>
-            <form method="POST" action="{{ route('contact') }}" class="form-horizontal mt-4">
+            <form method="POST" action="{{ route('contact.store') }}" class="form-horizontal mt-4">
                 @csrf
                 @foreach ($members as $member)
                     

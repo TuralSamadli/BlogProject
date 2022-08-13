@@ -14,8 +14,7 @@
                 @endif
 
 
-                <a href="{{ route('category.create') }}" type="button" class="btn waves-effect waves-light btn-success">Add
-                    category</a>
+               
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
@@ -29,15 +28,14 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($messages as $message)
                                 <tr>
 
-                                    <td>{{ $message->name }}</td>
-                                    <td>{{ $message->email }}</td>
+                                    <td>{{ $messages->name }}</td>
+                                    <td>{{ $messages->email }}</td>
 
-                                    <td>{{ $message->subject }}</td>
-                                    <td>{{ $message->message}}</td>
+                                    <td>{{ $messages->subject }}</td>
+                                    <td>{{ $messages->message}}</td>
 
                                 </tr>
-                            @endforeach
+                            
                         @endsection

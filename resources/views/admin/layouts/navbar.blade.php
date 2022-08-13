@@ -38,14 +38,14 @@
                     </a>
                 </li>
                 <li>
-                    <a class="waves-effect waves-dark" href="{{ route('message') }}" aria-expanded="false">
+                    <a class="waves-effect waves-dark" href="{{ route('message.index') }}" aria-expanded="false">
                         <i class="far fa-circle text-danger"></i>
                         <span class="hide-menu">User Messages</span>
                     </a>
                 </li>
 
                 <li>
-                    <a class="waves-effect waves-dark" href="{{ route('info') }}" aria-expanded="false">
+                    <a class="waves-effect waves-dark" href="{{ route('index') }}" aria-expanded="false">
                         <i class="far fa-circle text-danger"></i>
                         <span class="hide-menu">User General</span>
                     </a>

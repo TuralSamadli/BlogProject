@@ -52,7 +52,7 @@
                 </li>
 
                 <li>
-                    <a class="waves-effect waves-dark" href="pages-login.html" aria-expanded="false">
+                    <a class="waves-effect waves-dark" href="{{route('logout.index')}}" aria-expanded="false">
                         <i class="far fa-circle text-success"></i>
                         <span class="hide-menu">Log Out</span>
                     </a>

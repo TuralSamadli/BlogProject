@@ -46,9 +46,9 @@ Tural Samadli										</h4>
 													</a>
 												</li>
 											</ul>
-										</div>
+								     	</div>
 										<div class="about-links wow fadeInUp" data-wow-delay="0.6s">
-											<a href="#" class="mybtn3 mybtn-bg"> <span>Contact Me</span> </a>
+											<a href="{{route('login')}}" class="mybtn3 mybtn-bg"> <span>Log in</span> </a>
 										</div>
 									</div>
 								</div>
@@ -83,10 +83,8 @@ Tural Samadli										</h4>
 									</div>
 									<div class="col-lg-8 align-self-center">
 										<div class="short-description wow fadeInUp">
-											<p>
-dd											<p>
-												Left till here away at to whom past. Feelings laughing at no wondered repeated provided finished. It acceptance thoroughly my advantages everything as.
-											</p>
+											
+											<p>			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa totam, veniam, officiis iste impedit quidem perspiciatis quaerat vitae corporis expedita autem ullam. Iure delectus eveniet ab eaque, voluptatem soluta suscipit?								</p>
 											<div class="about-links">
 												<a href="#" class="mybtn3 mybtn-bg"> <span>Download CV</span> </a>
 											</div>
@@ -143,94 +141,288 @@ dd											<p>
 			
 			<!-- Resume Area Start -->
 			<div class="resume-wrapper" id="resume">
-				<div class="container">
-					<div class="row justify-content-center">
-						<div class="col-lg-12">
-							<div class="section-heading wow fadeInUp" data-wow-delay="0.2s">
-								<h2 class="title">
-									My <span class="color">Resume</span>
-									<span class="bg-text">Resume</span>
-								</h2>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-lg-6">
-							<div class="resume-box">
-								<div class="resume-title">
-									<h4 class="title">
-											Education
-									</h4>
-								</div>
-								<div class="education-list">
-									<div class="single-education  wow fadeInUp">
-											<div class="year">
-												<span>2006-2008</span>
-											</div>
-										<h4 class="university-name">
-											Envato University 
-										</h4>
-										<p class="degree">MSC in Computer Engineer </p>
-									</div>
-									<div class="single-education wow fadeInUp">
-											<div class="year">
-												<span>2003-205</span>
-											</div>
-											<h4 class="university-name">
-												Envato University 
-											</h4>
-											<p class="degree">BSC in Computer Engineer </p>
-									</div>
-									<div class="single-education wow fadeInUp">
-										<div class="year">
-											<span>2000-2002</span>
-										</div>
-										<h4 class="university-name">
-											Envato University 
-										</h4>
-										<p class="degree">HSC in Computer Engineer </p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-6">
-							<div class="resume-box">
-								<div class="resume-title">
-									<h4 class="title">
-										Experience
-									</h4>
-								</div>
-								<div class="education-list">
-									<div class="single-education wow fadeInUp">
-											<div class="year">
-												<span>2014-2018</span>
-											</div>
-										<h4 class="university-name">
-											Envato Company 
-										</h4>
-										<p class="degree">Full Stack Web Developer</p>
-									</div>
-									<div class="single-education wow fadeInUp">
-											<div class="year">
-												<span>2011-2014</span>
-											</div>
-											<h4 class="university-name">
-												Envato Company 
-											</h4>
-											<p class="degree">Web Developer</p>
-									</div>
-									<div class="single-education wow fadeInUp">
-										<div class="year">
-											<span>2009-2011</span>
-										</div>
-										<h4 class="university-name">
-											Envato Company 
-										</h4>
-										<p class="degree"> Web Designer</p>
-									</div>
-								</div>
-							</div>
-						</div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12">
+                            <div class="section-heading wow fadeInUp" data-wow-delay="0.2s">
+                                <h2 class="title">
+                                    My <span class="color">Resume</span>
+                                    <span class="bg-text">Resume</span>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="resume-box">
+                                <div class="resume-title">
+                                    <h4 class="title">
+                                        Education
+                                    </h4>
+                                </div>
+                                @foreach ($educations as $education )
+                                <div class="education-list">
+                                    <div class="single-education  wow fadeInUp">
+                                        <div class="year">
+                                            <span> {{$education->start_date}} - {{$education->end_date}}</span>
+                                        </div>
+                                        <h4 class="university-name">
+                                            {{ $education->title}}
+                                        </h4>
+                                        <p class="degree"> {{ $education->description }} </p>
+                                    </div>
+                                </div>         
+                                @endforeach
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="resume-box">
+                                <div class="resume-title">
+                                    <h4 class="title">
+                                        Experience
+                                    </h4>
+                                </div>
+                                @foreach ($experiences as $experience)
+                                <div class="education-list">
+                                    <div class="single-education wow fadeInUp">
+                                        <div class="year">
+                                            <span>{{$experience->start_date}} - {{$experience->end_date}}</span>
+                                        </div>
+                                        <h4 class="university-name">
+                                            {{ $experience->title}}
+                                        </h4>
+                                        <p class="degree">{{ $experience->description }}</p>
+                                    </div>
+                                </div>
+                                @endforeach
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="resume-box">
+                                <div class="resume-title">
+                                    <h4 class="title">
+                                        Coding Skills
+                                    </h4>
+                                </div>
+                                <div class="skill-list">
+                                    <div class="single-skill wow fadeInUp">
+                                        <div class="heading">
+                                            <h4 class="name">
+                                                HTML
+                                            </h4>
+                                            <h5 class="value">
+                                                75%
+                                            </h5>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                                aria-valuemax="100" style="width: 85%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="single-skill wow fadeInUp">
+                                        <div class="heading">
+                                            <h4 class="name">
+                                                JS
+                                            </h4>
+                                            <h5 class="value">
+                                                75%
+                                            </h5>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                role="progressbar" aria-valuenow="95" aria-valuemin="0"
+                                                aria-valuemax="100" style="width: 95%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="single-skill wow fadeInUp">
+                                        <div class="heading">
+                                            <h4 class="name">
+                                                PHP
+                                            </h4>
+                                            <h5 class="value">
+                                                75%
+                                            </h5>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                role="progressbar" aria-valuenow="65" aria-valuemin="0"
+                                                aria-valuemax="100" style="width: 65%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="single-skill wow fadeInUp">
+                                        <div class="heading">
+                                            <h4 class="name">
+                                                JAVA
+                                            </h4>
+                                            <h5 class="value">
+                                                75%
+                                            </h5>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                                aria-valuemax="100" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="resume-box">
+                                <div class="resume-title">
+                                    <h4 class="title">
+                                        Language Skills
+                                    </h4>
+                                </div>
+                                <div class="skill-list">
+                                    <div class="single-skill wow fadeInUp">
+                                        <div class="heading">
+                                            <h4 class="name">
+                                                English
+                                            </h4>
+                                            <h5 class="value">
+                                                75%
+                                            </h5>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                role="progressbar" aria-valuenow="95" aria-valuemin="0"
+                                                aria-valuemax="100" style="width: 95%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="single-skill wow fadeInUp">
+                                        <div class="heading">
+                                            <h4 class="name">
+                                                Hindi
+                                            </h4>
+                                            <h5 class="value">
+                                                75%
+                                            </h5>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                role="progressbar" aria-valuenow="85" aria-valuemin="0"
+                                                aria-valuemax="100" style="width: 85%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="single-skill wow fadeInUp">
+                                        <div class="heading">
+                                            <h4 class="name">
+                                                Spanis
+                                            </h4>
+                                            <h5 class="value">
+                                                75%
+                                            </h5>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                                aria-valuemax="100" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="single-skill wow fadeInUp">
+                                        <div class="heading">
+                                            <h4 class="name">
+                                                Arabic
+                                            </h4>
+                                            <h5 class="value">
+                                                75%
+                                            </h5>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                role="progressbar" aria-valuenow="65" aria-valuemin="0"
+                                                aria-valuemax="100" style="width: 65%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="resume-box">
+                                <div class="resume-title">
+                                    <h4 class="title">
+                                        Professional Skills
+                                    </h4>
+                                </div>
+                                <div class="skill-list2">
+                                    <div class="single-skill2 wow fadeInUp">
+                                        <div class="circle-progress" data-percent="80"></div>
+                                        <h4 class="name">
+                                            Web Design
+                                        </h4>
+                                    </div>
+                                    <div class="single-skill2 wow fadeInUp">
+                                        <div class="circle-progress" data-percent="90"></div>
+                                        <h4 class="name">
+                                            Web Devlopment
+                                        </h4>
+                                    </div>
+                                    <div class="single-skill2 wow fadeInUp">
+                                        <div class="circle-progress" data-percent="70"></div>
+                                        <h4 class="name">
+                                            Graphic Design
+                                        </h4>
+                                    </div>
+                                    <div class="single-skill2 wow fadeInUp">
+                                        <div class="circle-progress" data-percent="85"></div>
+                                        <h4 class="name">
+                                            Auto CAD
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="resume-box">
+                                <div class="resume-title">
+                                    <h4 class="title">
+                                        Knowledge
+                                    </h4>
+                                </div>
+                                <div class="knowledge-list wow fadeInUp">
+                                    <div class="single-knowledge">
+                                        <p>
+                                            Search engine marketing
+                                        </p>
+                                    </div>
+                                    <div class="single-knowledge">
+                                        <p>
+                                            iOS and android apps
+                                        </p>
+                                    </div>
+                                    <div class="single-knowledge">
+                                        <p>
+                                            Spreadsheets (Excel, Google Spreadsheets, etc.)
+                                        </p>
+                                    </div>
+                                    <div class="single-knowledge">
+                                        <p>
+                                            Email Communication
+                                        </p>
+                                    </div>
+                                    <div class="single-knowledge">
+                                        <p>
+                                            Presentation software (PowerPoint, Keynote)
+                                        </p>
+                                    </div>
+                                    <div class="single-knowledge">
+                                        <p>
+                                            Office suites (Microsoft Office, G Suite)
+                                        </p>
+                                    </div>
+                                    <div class="single-knowledge">
+                                        <p>
+                                            Operating systems (Windows and MacOS)
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 						
 			<!-- Resume Area End -->
 			

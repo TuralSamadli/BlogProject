@@ -100,7 +100,7 @@ Tural Samadli										</h4>
 														<span><label>Birthday:</label> {{ $about->birthday}} </span>
 													</li>
 													<li>
-														<span><label>Age:</label>  </span>
+														<span><label>Age:</label> {{$age}} </span>
 													</li>
 													<li>
 														<span><label>City:</label> {{ $about->city}} </span>

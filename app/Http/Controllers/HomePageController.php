@@ -5,8 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\About;
 use app\Models\Blog;
-use app\Models\Portfolio;
-use app\Models\Resume;
+use App\Models\Resume;
 use app\Models\Services;
 use App\Models\Send;
 use App\Http\Requests\UserMessages;
@@ -19,10 +18,13 @@ class HomePageController extends Controller
             $contact = Contact::where('id', 1)->first();
             // dd($info);
             $about = About::where('id', 1)->first();
-            return view('homepage', compact('contact','about'));
+            $educations  = Resume::where('is_deleted', 0)->where('resume_type', 1)->get();
+            $experiences = Resume::where('is_deleted', 0)->where('resume_type', 2)->get(); 
+            return view('homepage', compact('contact','about','educations','experiences'));
+
         }
     
-          public function user_messages(Request $request)
+        public function user_messages(Request $request)
           {
               $send = Send::create([
                   'name'      => $request->name,
@@ -37,8 +39,11 @@ class HomePageController extends Controller
               }
            
           }
-    public function view(){
-        return view('homepage');
-    }
+        public function view(){
+            return view('homepage');
+    
+        }
+        
+
     
       }

@@ -16,7 +16,9 @@ class ResumeController extends Controller
          return view('admin.resume_edit',compact('resume'));
     }
     public function update(Request $request){
+        dd($request->all());
     $resume=Resume::where('id',$request->id)->update([
+
       'resume_type'=> $request->resume_type,
       'start_date'=>$request->start_date,
       'end_date'=>$request->end_date,

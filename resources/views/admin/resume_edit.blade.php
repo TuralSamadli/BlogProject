@@ -22,8 +22,8 @@
                     <label>Resume Type</label>
                         <select class="custom-select col-12" id="inlineFormCustomSelect" name="resume_type">
                             <option selected disabled>Choose Resume Type</option>
-                            <option value=" {{$resume->resume_type }}" @if ($resume->resume_type == 1) selected @endif >Education</option>
-                            <option value=" {{$resume->resume_type }}" @if ($resume->resume_type == 2) selected @endif>Experience</option>
+                            <option value="{{$resume->resume_type }}" @if ($resume->resume_type == 1) selected @endif >Education</option>
+                            <option value="{{$resume->resume_type }}" @if ($resume->resume_type == 2) selected @endif>Experience</option>
                         </select>
                 </div>
                 <div class="form-group" style="width: 50%">

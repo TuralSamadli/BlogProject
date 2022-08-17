@@ -21,7 +21,7 @@
 
                 <div class="form-group" style="width: 50%">
                     <label>Birthday</label>
-                    <input value="{{ $members->birtday }}" type="date" class="form-control" name="birthday">
+                    <input value="{{ $members->birthday }}" type="date" class="form-control" name="birthday">
                 </div>
                 
                 <div class="form-group" style="width: 50%">

@@ -11,8 +11,8 @@ class ResumeController extends Controller
         $resume=Resume::where('is_deleted',0)->get();
         return view('admin.resume',compact('resume'));
     }
-    public function edit($id){
-        $resume=Resume::where('id',$id)->first();
+    public function edit(){
+        $resume=Resume::where('id',1)->first();
          return view('admin.resume_edit',compact('resume'));
     }
     public function update(Request $request){

@@ -37,7 +37,7 @@
                                     <td>{{ $message->email }}</td>
 
                                     <td>{{ $message->subject }}</td>
-                                    <td>{{ $message->message}}</td>
+                                    <td><p> {{ $message->message}}</p></td>
                                     <td>   <div class="button-group" style="margin-left: 450px; padding-top: 20px">
                                         <td> <button onclick="MessageDelete('{{$message->id}}')" type="button" class="btn waves-effect waves-light btn-danger">Delete</button></td>
                                     </div></td>

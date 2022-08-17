@@ -35,7 +35,9 @@
 
                                     <td>{{ $messages->subject }}</td>
                                     <td>{{ $messages->message}}</td>
-
+                                    <td>   <div class="button-group" style="margin-left: 450px; padding-top: 20px">
+                                        <button  onclick="{{route('message.delete')}}" type="button" class="btn waves-effect waves-light btn-success">Delete</button>
+                                    </div></td>
                                 </tr>
                             
                         @endsection

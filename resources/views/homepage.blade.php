@@ -112,7 +112,7 @@ Tural Samadli										</h4>
 														<span><label>Study:</label> {{ $about->study}} </span>
 													</li>
 													<li>
-														<span><label>Degree:</label> Master</span>
+														<span><label>Degree:</label> {{$about->description}}</span>
 													</li>	
 													<li>
 														<span><label>Website:</label> <a href=" {{ $about->website}} ">{{ $about->website}}</a></span>
@@ -138,6 +138,7 @@ Tural Samadli										</h4>
 				</div>
 			</div>
 			<!-- About div End -->
+            
 			
 			<!-- Resume Area Start -->
 			<div class="resume-wrapper" id="resume">

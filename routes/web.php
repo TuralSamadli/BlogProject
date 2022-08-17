@@ -7,6 +7,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\MessagesController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\ResumeController;
 
 
 /*
@@ -35,6 +36,12 @@ use App\Http\Controllers\LogoutController;
    Route::get('/general',[ContactController::class,'index'])->name('index');
    Route::get('/contact',[ContactController::class,'update'])->name('contact.store');
    Route::get('/messages',[MessagesController::class,'index'])->name('message.index');
+   Route::post('/messages/delete',[MessagesController::class,'delete'])->name('message.delete');
+   Route::get('/resume',[ResumeController::class,'index'])->name('resume.index');
+   Route::get('/resume/edit',[ResumeController::class,'edit'])->name('resume.edit');
+   Route::post('/resume/update',[ResumeController::class,'update'])->name('resume.update');
+   Route::post('/resume/delete',[ResumeController::class,'delete'])->name('resume.delete');
    Route::get('/logout',[LogoutController::class,'logout'])->name('logout.index');
+
 });
 // });

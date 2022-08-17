@@ -11,4 +11,13 @@ class MessagesController extends Controller
     $messages=Send::where('id',1)->first();
             return view('admin.messages',compact('messages'));
         }
+        public function delete(){
+            if(Send::where('id,1')->delete('id,1')){
+                
+                return response()->json([
+                    'message'=> 'Message was deleted successfully'
+                ]);
+            }
+        
     }
+}

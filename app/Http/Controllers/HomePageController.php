@@ -23,6 +23,7 @@ class HomePageController extends Controller
             $age         = Carbon::parse($birthdate)->age;
             $educations  = Resume::where('is_deleted', 0)->where('resume_type', 1)->get();
             $experiences = Resume::where('is_deleted', 0)->where('resume_type', 2)->get(); 
+
             return view('homepage', compact('contact','about','educations','experiences','age','birthdate'));
 
         }

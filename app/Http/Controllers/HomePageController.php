@@ -39,7 +39,7 @@ class HomePageController extends Controller
               ]);
               if ($send)
               {
-                  return redirect()->route('home');
+                  return redirect()->route('home')->with('success','Message successfully sent');
               }
            
           }

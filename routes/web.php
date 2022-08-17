@@ -32,9 +32,9 @@ use App\Http\Controllers\ResumeController;
   
    Route::get('/',  [AdminController::class,'return'])->name('new');
    Route::get('/user', [AdminController::class,'index'])->name('user');
-   Route::get('/about', [AdminController::class,'store'])->name('store.index');
+   Route::post('/user/edit', [AdminController::class,'update'])->name('user.update');
    Route::get('/general',[ContactController::class,'index'])->name('index');
-   Route::get('/contact',[ContactController::class,'update'])->name('contact.store');
+   Route::post('/contact',[ContactController::class,'update'])->name('contact.update');
    Route::get('/messages',[MessagesController::class,'index'])->name('message.index');
    Route::post('/messages/delete',[MessagesController::class,'delete'])->name('message.delete');
    Route::get('/resume',[ResumeController::class,'index'])->name('resume.index');

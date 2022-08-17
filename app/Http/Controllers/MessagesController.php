@@ -8,16 +8,16 @@ use App\Models\Send;
 class MessagesController extends Controller
 {
    public function index(){
-    $messages=Send::where('id',1)->first();
+    $messages=Send::where('is_deleted',0)->get();
             return view('admin.messages',compact('messages'));
         }
-        public function delete(){
-            if(Send::where('id,1')->delete('id,1')){
-                
-                return response()->json([
-                    'message'=> 'Message was deleted successfully'
-                ]);
-            }
-        
-    }
+        public function delete(Request $request){
+            //        dd($request->all());
+                    if(Send::destroy($request->id)){
+                        return "ok";
+                    }
+                    else{
+                        return "no";
+                    }
+                }
 }

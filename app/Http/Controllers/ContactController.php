@@ -17,22 +17,21 @@ class ContactController extends Controller
         $members=About::where('id', 1)->first();
         return view('admin.contact',compact('members'));
     }
-
-    public function update(Request $request)
-    {
-        $contact = Contact::where('id',1)->update([
-            'phone'      => $request->phone,
-            'email'   => $request->email,
-            'address'   => $request->address,
-            'facebook'   => $request->facebook,
-            'linkedin'   => $request->linkedin,
-            'github'   => $request->github,
-            'instagram'   => $request->instagram,
-
-
-        ]);
-        
-             return redirect()-> back()->with('success','Istifadeci melumatlari yenilendi');
-        
-}
-}
+    public function update(Request $request){
+    $members = About::where('id',1)->update([
+        'birthday'         => $request->birthday,
+        'city'             => $request->city,
+        'study'            => $request->study,
+        'website'          => $request->website,
+        'interests'        => $request->interests,
+        'degree'           => $request->degree,
+        'description'      => $request->description
+    ]);
+    if($members){
+        return redirect()->route('index')->with('success','Information updated successfully!');
+            }
+            else{
+                return redirect()->route('index')->with('error','Something went wrong');
+            }
+    
+}}

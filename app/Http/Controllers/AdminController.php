@@ -28,7 +28,7 @@ class AdminController extends Controller
             return view('admin.about',compact('users'));
         }
     
-        public function store(Request $request)
+        public function update(Request $request)
         {
             $contact = Contact::where('id',1)->update([
                 'phone'      => $request->phone,

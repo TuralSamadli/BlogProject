@@ -49,12 +49,48 @@
                                 <td>{{ $resume->start_date}}</td>
                                 <td>{{ $resume->end_date}}</td>
                                 <td> <a href="{{ route('resume.edit', $resume->id) }}}}" class="btn waves-effect waves-light btn-warning">Edit</a></td>  </td>
-                                <td><button onclick="{{Route('resume.delete')}}" type="button"
-                                    class="btn waves-effect waves-light btn-danger">Delete</button></td>
+                                <td> <button onclick="ResumeDelete('{{$resume->id}}')" type="button" class="btn waves-effect waves-light btn-danger">Delete</button></td>
 
-
-
-
-                            </tr>
+ </tr>
                         @endforeach
+
+
+                        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+                                <script>
+                                    function ResumeDelete(id) {
+                                        swal({
+                                            title: "Warning",
+                                            text: "Are you sure?",
+                                            icon: "warning",
+                                            buttons: true,
+                                            dangerMode: true,
+                                            buttons: ["No", "Yes"],
+                                        })
+                                            .then((willDelete) => {
+                                                if (willDelete) {
+                                                    // let CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+                                                    $.ajax({
+                                                        url: "{{ route('resume.delete') }}",
+                                                        data: { "_token": "{{ csrf_token() }}", id:id },
+                                                        method: "POST",
+                                                        success: function (data) {
+                                                            if(data==="ok"){
+                                                                swal("Success!", "Resume deleted!", "success");
+                                                                window.setTimeout(function(){location.reload()},2000)
+                                                            }else{
+                                                                swal("Error!", "Resume didn't deleted!", "error");
+                                                            }
+                                                        },
+                                                        error: function (x, sts) {
+                                                            console.log("Error...");
+                                                            console.log('no');
+                                                        },
+                                                    });
+                                                } else {
+                                                    swal("Cancelled!");
+                                                }
+                                            });
+                                    }
+                                </script>
 @endsection

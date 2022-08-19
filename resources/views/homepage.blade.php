@@ -138,7 +138,109 @@ Tural Samadli										</h4>
 				</div>
 			</div>
 			<!-- About div End -->
+                        <!-- My service Start -->
+                        <div class="service-wrapper" id="service">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-12">
+                                        <div class="section-heading wow fadeInUp" data-wow-delay="0.2s">
+                                            <h2 class="title">
+                                                My <span class="color">Services</span>
+                                                <span class="bg-text">Services</span>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-4 col-md-6">
+                                        <a href="service-details.html" class="single-feature wow fadeInUp">
+                                            <img src="assets/images/icon/024-server.png" alt="">
+                                            <div class="content">
+                                                <h4 class="title">
+                                                    Amazon AWS
+                                                </h4>
+                                                <p>
+                                                    Clarinet accustomed. Would legs of framework officers. We've to morning like a
+                                                    contracting
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <a href="service-details.html" class="single-feature wow fadeInUp">
+                                            <img src="assets/images/icon/062-code-1.png" alt="">
+                                            <div class="content">
+                                                <h4 class="title">
+                                                    Web Development
+                                                </h4>
+                                                <p>
+                                                    Clarinet accustomed. Would legs of framework officers. We've to morning like a
+                                                    contracting
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <a href="service-details.html" class="single-feature wow fadeInUp">
+                                            <img src="assets/images/icon/064-vector.png" alt="">
+                                            <div class="content">
+                                                <h4 class="title">
+                                                    Creative design
+                                                </h4>
+                                                <p>
+                                                    Clarinet accustomed. Would legs of framework officers. We've to morning like a
+                                                    contracting
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <a href="service-details.html" class="single-feature wow fadeInUp">
+                                            <img src="assets/images/icon/043-analytics.png" alt="">
+                                            <div class="content">
+                                                <h4 class="title">
+                                                    App Development
+                                                </h4>
+                                                <p>
+                                                    Clarinet accustomed. Would legs of framework officers. We've to morning like a
+                                                    contracting
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <a href="service-details.html" class="single-feature wow fadeInUp">
+                                            <img src="assets/images/icon/033-rocket.png" alt="">
+                                            <div class="content">
+                                                <h4 class="title">
+                                                    Fast & Optimized
+                                                </h4>
+                                                <p>
+                                                    Clarinet accustomed. Would legs of framework officers. We've to morning like a
+                                                    contracting
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <a href="service-details.html" class="single-feature wow fadeInUp">
+                                            <img src="assets/images/icon/054-puzzle.png" alt="">
+                                            <div class="content">
+                                                <h4 class="title">
+                                                    Pixel Precision
+                                                </h4>
+                                                <p>
+                                                    Clarinet accustomed. Would legs of framework officers. We've to morning like a
+                                                    contracting
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
             
+                        <!-- My service End -->
 			
 			<!-- Resume Area Start -->
 			<div class="resume-wrapper" id="resume">

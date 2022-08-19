@@ -24,7 +24,9 @@ use App\Http\Controllers\ResumeController;
 
 
    Route::get('/',[HomePageController::class,'index'])->name('home');
+
    Route::post('/send', [HomePageController::class, 'user_messages'])->name('user_messages');
+
    Route::get('/login',[LoginController::class,'index'])->name('login');
    Route::post('/login',[LoginController::class,'authenticate'])->name('login.index');
    // Route::middleware(['auth'])->group(function () {

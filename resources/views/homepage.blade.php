@@ -1,249 +1,193 @@
 @extends('layouts.master')
 @section('content')
+    <div class="main-content">
+        <div class="main-content-inner">
 
-
-	<div class="main-content">
-		<div class="main-content-inner">
-			
-			<!-- About div Start -->
-				<div class="home-section" id="home">
-					<div class="particals"></div>
-					<div class="container">
-						<div class="row justify-content-center">
-							<div class="col-lg-6">
-								<div class="home-content">
-									<div class="home-image">
-										<img src="{{asset('assets/images/tural.jpg')}}" alt="" class="wow zoomIn" data-wow-delay="0.2s">
-									</div>
-									<div class="home-main-content">
-										<h4 class="heading wow fadeInUp" data-wow-delay="0.3s">
-Tural Samadli										</h4>
-										<div class="designation wow zoomIn" data-wow-delay="0.4s">
-											<span>
-												I'm a <span class="typed"></span>
-											</span>
-										</div>
-										<div class="social-info wow fadeInUp" data-wow-delay="0.5s">
-											<ul>
-												<li>
-													<a href="{{ $contact -> facebook }}">
-														<i class="fab fa-facebook-f"></i>
-													</a>
-												</li>
-												<li>
-													<a href="{{ $contact -> linkedin }}">
-														<i class="fab fa-linkedin-in"></i>
-													</a>
-												</li>
-												<li>
-													<a href="{{ $contact -> github }}">
-														<i class="fab fa-github"></i>
-													</a>
-												</li>
-												<li>
-													<a href="{{ $contact -> instagram }}">
-														<i class="fab fa-instagram"></i>
-													</a>
-												</li>
-											</ul>
-								     	</div>
-										<div class="about-links wow fadeInUp" data-wow-delay="0.6s">
-											<a href="{{route('login')}}" class="mybtn3 mybtn-bg"> <span>Log in</span> </a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			<!-- About div End -->
-
-			<!-- About div Start -->
-			<div class="about-section" id="about">
-				<div class="container">
-					<div class="row justify-content-center">
-						<div class="col-lg-12">
-							<div class="section-heading wow fadeInUp" data-wow-delay="0.2s">
-								<h2 class="title">
-									About <span class="color">Me</span>
-									<span class="bg-text">About</span>
-								</h2>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="about">
-								<div class="row">
-									<div class="col-lg-4">
-										<div class="about-image wow fadeInUp" data-wow-delay="0.3s">
-											<img src="{{asset('assets/images/tural.jpg')}}" alt="">
-										</div>
-										
-									</div>
-									<div class="col-lg-8 align-self-center">
-										<div class="short-description wow fadeInUp">
-											
-											<p>			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa totam, veniam, officiis iste impedit quidem perspiciatis quaerat vitae corporis expedita autem ullam. Iure delectus eveniet ab eaque, voluptatem soluta suscipit?								</p>
-											<div class="about-links">
-												<a href="#" class="mybtn3 mybtn-bg"> <span>Download CV</span> </a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-lg-12">
-										<div class="about-content wow fadeInUp">
-											<div class="personal-info">
-												<ul>
-													<li>
-														<span><label>Birthday:</label> {{ $about->birthday}} </span>
-													</li>
-													<li>
-														<span><label>Age:</label> {{$age}} </span>
-													</li>
-													<li>
-														<span><label>City:</label> {{ $about->city}} </span>
-													</li>
-													<li>
-														<span><label>Interests:</label> {{ $about->interests}} </span>
-													</li>
-													<li>
-														<span><label>Study:</label> {{ $about->study}} </span>
-													</li>
-													<li>
-														<span><label>Degree:</label> {{$about->description}}</span>
-													</li>	
-													<li>
-														<span><label>Website:</label> <a href=" {{ $about->website}} ">{{ $about->website}}</a></span>
-													</li>
-													<li>
-														<span><label>Mail:</label> {{ $contact->email}} </span>
-													</li>
-													<li>
-														<span><label>Phone:</label> {{ $contact->phone}} </span>
-													</li>
-													<li>
-														<span><label>Github:</label> <a href=" {{ $contact -> github }} ">TuralSamadli</a></span>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-			<!-- About div End -->
-                        <!-- My service Start -->
-                        <div class="service-wrapper" id="service">
-                            <div class="container">
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-12">
-                                        <div class="section-heading wow fadeInUp" data-wow-delay="0.2s">
-                                            <h2 class="title">
-                                                My <span class="color">Services</span>
-                                                <span class="bg-text">Services</span>
-                                            </h2>
-                                        </div>
-                                    </div>
+            <!-- About div Start -->
+            <div class="home-section" id="home">
+                <div class="particals"></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6">
+                            <div class="home-content">
+                                <div class="home-image">
+                                    <img src="{{ asset('assets/images/tural.jpg') }}" alt="" class="wow zoomIn"
+                                        data-wow-delay="0.2s">
                                 </div>
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-4 col-md-6">
-                                        <a href="service-details.html" class="single-feature wow fadeInUp">
-                                            <img src="assets/images/icon/024-server.png" alt="">
-                                            <div class="content">
-                                                <h4 class="title">
-                                                    Amazon AWS
-                                                </h4>
-                                                <p>
-                                                    Clarinet accustomed. Would legs of framework officers. We've to morning like a
-                                                    contracting
-                                                </p>
-                                            </div>
-                                        </a>
+                                <div class="home-main-content">
+                                    <h4 class="heading wow fadeInUp" data-wow-delay="0.3s">
+                                        Tural Samadli </h4>
+                                    <div class="designation wow zoomIn" data-wow-delay="0.4s">
+                                        <span>
+                                            I'm a <span class="typed"></span>
+                                        </span>
                                     </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <a href="service-details.html" class="single-feature wow fadeInUp">
-                                            <img src="assets/images/icon/062-code-1.png" alt="">
-                                            <div class="content">
-                                                <h4 class="title">
-                                                    Web Development
-                                                </h4>
-                                                <p>
-                                                    Clarinet accustomed. Would legs of framework officers. We've to morning like a
-                                                    contracting
-                                                </p>
-                                            </div>
-                                        </a>
+                                    <div class="social-info wow fadeInUp" data-wow-delay="0.5s">
+                                        <ul>
+                                            <li>
+                                                <a href="{{ $contact->facebook }}">
+                                                    <i class="fab fa-facebook-f"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="{{ $contact->linkedin }}">
+                                                    <i class="fab fa-linkedin-in"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="{{ $contact->github }}">
+                                                    <i class="fab fa-github"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="{{ $contact->instagram }}">
+                                                    <i class="fab fa-instagram"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <a href="service-details.html" class="single-feature wow fadeInUp">
-                                            <img src="assets/images/icon/064-vector.png" alt="">
-                                            <div class="content">
-                                                <h4 class="title">
-                                                    Creative design
-                                                </h4>
-                                                <p>
-                                                    Clarinet accustomed. Would legs of framework officers. We've to morning like a
-                                                    contracting
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <a href="service-details.html" class="single-feature wow fadeInUp">
-                                            <img src="assets/images/icon/043-analytics.png" alt="">
-                                            <div class="content">
-                                                <h4 class="title">
-                                                    App Development
-                                                </h4>
-                                                <p>
-                                                    Clarinet accustomed. Would legs of framework officers. We've to morning like a
-                                                    contracting
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <a href="service-details.html" class="single-feature wow fadeInUp">
-                                            <img src="assets/images/icon/033-rocket.png" alt="">
-                                            <div class="content">
-                                                <h4 class="title">
-                                                    Fast & Optimized
-                                                </h4>
-                                                <p>
-                                                    Clarinet accustomed. Would legs of framework officers. We've to morning like a
-                                                    contracting
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <a href="service-details.html" class="single-feature wow fadeInUp">
-                                            <img src="assets/images/icon/054-puzzle.png" alt="">
-                                            <div class="content">
-                                                <h4 class="title">
-                                                    Pixel Precision
-                                                </h4>
-                                                <p>
-                                                    Clarinet accustomed. Would legs of framework officers. We've to morning like a
-                                                    contracting
-                                                </p>
-                                            </div>
-                                        </a>
+                                    <div class="about-links wow fadeInUp" data-wow-delay="0.6s">
+                                        <a href="{{ route('login') }}" class="mybtn3 mybtn-bg"> <span>Log in</span> </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-            
-                        <!-- My service End -->
-			
-			<!-- Resume Area Start -->
-			<div class="resume-wrapper" id="resume">
+                    </div>
+                </div>
+            </div>
+            <!-- About div End -->
+
+            <!-- About div Start -->
+            <div class="about-section" id="about">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12">
+                            <div class="section-heading wow fadeInUp" data-wow-delay="0.2s">
+                                <h2 class="title">
+                                    About <span class="color">Me</span>
+                                    <span class="bg-text">About</span>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="about">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="about-image wow fadeInUp" data-wow-delay="0.3s">
+                                            <img src="{{ asset('assets/images/tural.jpg') }}" alt="">
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-8 align-self-center">
+                                        <div class="short-description wow fadeInUp">
+
+                                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa totam,
+                                                veniam, officiis iste impedit quidem perspiciatis quaerat vitae corporis
+                                                expedita autem ullam. Iure delectus eveniet ab eaque, voluptatem soluta
+                                                suscipit? </p>
+                                            <div class="about-links">
+                                                <a href="#" class="mybtn3 mybtn-bg"> <span>Download CV</span> </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="about-content wow fadeInUp">
+                                            <div class="personal-info">
+                                                <ul>
+                                                    <li>
+                                                        <span><label>Birthday:</label> {{ $about->birthday }} </span>
+                                                    </li>
+                                                    <li>
+                                                        <span><label>Age:</label> {{ $age }} </span>
+                                                    </li>
+                                                    <li>
+                                                        <span><label>City:</label> {{ $about->city }} </span>
+                                                    </li>
+                                                    <li>
+                                                        <span><label>Interests:</label> {{ $about->interests }} </span>
+                                                    </li>
+                                                    <li>
+                                                        <span><label>Study:</label> {{ $about->study }} </span>
+                                                    </li>
+                                                    <li>
+                                                        <span><label>Degree:</label> {{ $about->description }}</span>
+                                                    </li>
+                                                    <li>
+                                                        <span><label>Website:</label> <a
+                                                                href=" {{ $about->website }} ">{{ $about->website }}</a></span>
+                                                    </li>
+                                                    <li>
+                                                        <span><label>Mail:</label> {{ $contact->email }} </span>
+                                                    </li>
+                                                    <li>
+                                                        <span><label>Phone:</label> {{ $contact->phone }} </span>
+                                                    </li>
+                                                    <li>
+                                                        <span><label>Github:</label> <a
+                                                                href=" {{ $contact->github }} ">TuralSamadli</a></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- About div End -->
+            <!-- My service Start -->
+            @foreach ($services as $services)
+                <div class="service-wrapper" id="service">
+
+                    <div class="container">
+
+                        <div class="row justify-content-center">
+                            <div class="col-lg-12">
+                                <div class="section-heading wow fadeInUp" data-wow-delay="0.2s">
+                                    <h2 class="title">
+                                        My <span class="color">Services</span>
+                                        <span class="bg-text">Services</span>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-4 col-md-6">
+                                <a href="service-details.html" class="single-feature wow fadeInUp">
+                                    <img src="assets/images/icon/024-server.png" alt="">
+                                    <div class="content">
+
+                                        <h4 class="title">
+                                            {{ $services->title }}
+                                        </h4>
+                                        <p>
+                                            {{ $services->description }}
+
+                                        </p>
+
+                                    </div>
+                                </a>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+            @endforeach
+
+
+
+            <!-- My service End -->
+
+            <!-- Resume Area Start -->
+            <div class="resume-wrapper" id="resume">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-12">
@@ -263,18 +207,18 @@ Tural Samadli										</h4>
                                         Education
                                     </h4>
                                 </div>
-                                @foreach ($educations as $education )
-                                <div class="education-list">
-                                    <div class="single-education  wow fadeInUp">
-                                        <div class="year">
-                                            <span> {{$education->start_date}} - {{$education->end_date}}</span>
+                                @foreach ($educations as $education)
+                                    <div class="education-list">
+                                        <div class="single-education  wow fadeInUp">
+                                            <div class="year">
+                                                <span> {{ $education->start_date }} - {{ $education->end_date }}</span>
+                                            </div>
+                                            <h4 class="university-name">
+                                                {{ $education->title }}
+                                            </h4>
+                                            <p class="degree"> {{ $education->description }} </p>
                                         </div>
-                                        <h4 class="university-name">
-                                            {{ $education->title}}
-                                        </h4>
-                                        <p class="degree"> {{ $education->description }} </p>
                                     </div>
-                                </div>         
                                 @endforeach
                             </div>
                         </div>
@@ -286,17 +230,17 @@ Tural Samadli										</h4>
                                     </h4>
                                 </div>
                                 @foreach ($experiences as $experience)
-                                <div class="education-list">
-                                    <div class="single-education wow fadeInUp">
-                                        <div class="year">
-                                            <span>{{$experience->start_date}} - {{$experience->end_date}}</span>
+                                    <div class="education-list">
+                                        <div class="single-education wow fadeInUp">
+                                            <div class="year">
+                                                <span>{{ $experience->start_date }} - {{ $experience->end_date }}</span>
+                                            </div>
+                                            <h4 class="university-name">
+                                                {{ $experience->title }}
+                                            </h4>
+                                            <p class="degree">{{ $experience->description }}</p>
                                         </div>
-                                        <h4 class="university-name">
-                                            {{ $experience->title}}
-                                        </h4>
-                                        <p class="degree">{{ $experience->description }}</p>
                                     </div>
-                                </div>
                                 @endforeach
                             </div>
                         </div>
@@ -526,132 +470,140 @@ Tural Samadli										</h4>
                     </div>
                 </div>
             </div>
-						
-			<!-- Resume Area End -->
-			
 
-			<!-- Contact Area Start -->
-			<div class="contact" id="contact">
-				<div class="container">
-					<div class="row justify-content-center">
-						<div class="col-lg-12">
-							<div class="section-heading wow fadeInUp" data-wow-delay="0.2s">
-								<h2 class="title">
-									Get In <span class="color">Touch</span>
-									<span class="bg-text">Contact</span>
-								</h2>
-							</div>
-						</div>
-					</div>
-					<div class="row justify-content-center">
-						<div class="col-lg-4 col-md-6">
-							<!-- Single Info -->
-							<div class="single-info wow fadeInUp">
-								<div class="info-icon">
-									<i class="flaticon-placeholder"></i>
-								</div>
-								<div class="info-content">
-									<h5>My Location:</h5>
-									<p>{{ $contact->address }}</p>
-								</div>
-		
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6">
-							<!-- Single Info -->
-							<div class="single-info wow fadeInUp">
-								<div class="info-icon">
-									<i class="flaticon-telephone"></i>
-								</div>
-								<div class="info-content">
-									<h5>Phone Number:</h5>
-									<p>{{ $contact->phone }}</p>
-								</div>
-		
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6">
-							<!-- Single Info -->
-							<div class="single-info wow fadeInUp">
-		
-								<div class="info-icon">
-									<i class="flaticon-email-2"></i>
-								</div>
-								<div class="info-contentr">
-									<h5>Email Address:</h5>
-									<p>{{ $contact->email }}</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row cAndm">
-						<div class="col-lg-6">
-							<div class="home-page-form">
-								<div class="contact-form">
-																
-										<div class="controls">
-											<div class="row">
-												<div class="col-md-6">
-													<form id="contact-form" method="POST" action="{{ route('user_messages') }}">
-														@csrf
-													<div class="form-group">
-													<input id="name" type="text" name="name" class="form-control" placeholder="Name*" required="required" data-error="Name is required.">
-														<div class="help-block with-errors"></div>
-													</div>
-												</div>
-												<div class="col-md-6">
-													<div class="form-group">
-													<input id="email" type="email" name="email" class="form-control" placeholder="Email*" required="required" data-error="Valid email is required.">
-														<div class="help-block with-errors"></div>
-													</div>
-												</div>
-											</div>
-											<div class="row">
-												<div class="col-md-12">
-													<div class="form-group">
-													<input id="subject" type="text" name="subject" class="form-control" placeholder="Subject*" required="required" data-error="Subject is required.">
-														<div class="help-block with-errors"></div>
-													</div>
-												</div>
-											</div>
-											<div class="row">
-												<div class="col-md-12">
-													<div class="form-group">
-													<textarea id="message" name="message" class="form-control" placeholder="Message*" rows="7" required="required" data-error="Please,leave us a message."></textarea>
-														<div class="help-block with-errors"></div>
-													</div>
-												</div>
-												<div class="col-md-12">
-													<button type="submit" class="mybtn3 mybtn-bg"><span>Send Message</span></button>
-												</div>
-											</div>
-										</div>
-									</form> <!-- End Contact From -->
-								</div>
-							</div>
-						</div>
-		
-						 
-					</div>
-					<!--/.row-->
-				</div>
-				<!--/.container-->
-			</div>
-			<!-- Contact Area End -->
-
-		</div>
-	</div>
-	<!-- Main Content Area End -->
+            <!-- Resume Area End -->
 
 
+            <!-- Contact Area Start -->
+            <div class="contact" id="contact">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12">
+                            <div class="section-heading wow fadeInUp" data-wow-delay="0.2s">
+                                <h2 class="title">
+                                    Get In <span class="color">Touch</span>
+                                    <span class="bg-text">Contact</span>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-6">
+                            <!-- Single Info -->
+                            <div class="single-info wow fadeInUp">
+                                <div class="info-icon">
+                                    <i class="flaticon-placeholder"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h5>My Location:</h5>
+                                    <p>{{ $contact->address }}</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <!-- Single Info -->
+                            <div class="single-info wow fadeInUp">
+                                <div class="info-icon">
+                                    <i class="flaticon-telephone"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h5>Phone Number:</h5>
+                                    <p>{{ $contact->phone }}</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <!-- Single Info -->
+                            <div class="single-info wow fadeInUp">
+
+                                <div class="info-icon">
+                                    <i class="flaticon-email-2"></i>
+                                </div>
+                                <div class="info-contentr">
+                                    <h5>Email Address:</h5>
+                                    <p>{{ $contact->email }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row cAndm">
+                        <div class="col-lg-6">
+                            <div class="home-page-form">
+                                <div class="contact-form">
+
+                                    <div class="controls">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <form id="contact-form" method="POST"
+                                                    action="{{ route('user_messages') }}">
+                                                    @csrf
+                                                    <div class="form-group">
+                                                        <input id="name" type="text" name="name"
+                                                            class="form-control" placeholder="Name*" required="required"
+                                                            data-error="Name is required.">
+                                                        <div class="help-block with-errors"></div>
+                                                    </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input id="email" type="email" name="email"
+                                                        class="form-control" placeholder="Email*" required="required"
+                                                        data-error="Valid email is required.">
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input id="subject" type="text" name="subject"
+                                                        class="form-control" placeholder="Subject*" required="required"
+                                                        data-error="Subject is required.">
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <textarea id="message" name="message" class="form-control" placeholder="Message*" rows="7"
+                                                        required="required" data-error="Please,leave us a message."></textarea>
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <button type="submit" class="mybtn3 mybtn-bg"><span>Send
+                                                        Message</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </form> <!-- End Contact From -->
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </div>
+            <!-- Contact Area End -->
+
+        </div>
+    </div>
+    <!-- Main Content Area End -->
 
 
 
 
-	<!-- Back to Top Start -->
-	<div class="bottomtotop">
-		<i class="fas fa-chevron-right"></i>
-	</div>
-	<!-- Back to Top End -->
 
+
+    <!-- Back to Top Start -->
+    <div class="bottomtotop">
+        <i class="fas fa-chevron-right"></i>
+    </div>
+    <!-- Back to Top End -->
 @endsection

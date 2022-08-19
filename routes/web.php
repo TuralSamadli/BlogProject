@@ -8,7 +8,7 @@ use App\Http\Controllers\MessagesController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\ResumeController;
-
+use App\Http\Controllers\UploadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,9 +26,12 @@ use App\Http\Controllers\ResumeController;
    Route::get('/',[HomePageController::class,'index'])->name('home');
 
    Route::post('/send', [HomePageController::class, 'user_messages'])->name('user_messages');
+   Route::get('/upload',[UploadController::class,'index'])->name('file.index');
 
+   Route::post('/fileupload',[UploadController::class,'upload'])->name('file.upload');
    Route::get('/login',[LoginController::class,'index'])->name('login');
    Route::post('/login',[LoginController::class,'authenticate'])->name('login.index');
+
    // Route::middleware(['auth'])->group(function () {
     Route::prefix('control')->group(function () {
   

@@ -88,7 +88,8 @@
                                                 expedita autem ullam. Iure delectus eveniet ab eaque, voluptatem soluta
                                                 suscipit? </p>
                                             <div class="about-links">
-                                                <a href="#" class="mybtn3 mybtn-bg"> <span>Download CV</span> </a>
+                                                <a href="{{route('file.index')}}" class="mybtn3 mybtn-bg" > <span>Download CV</span> </a>
+                                            </form>
                                             </div>
                                         </div>
                                     </div>

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\About;
 use app\Models\Blog;
 use App\Models\Resume;
-use app\Models\Services;
+use App\Models\Services;
 use App\Models\Send;
 use App\Http\Requests\UserMessages;
 use App\Models\Contact;
@@ -23,8 +23,9 @@ class HomePageController extends Controller
             $age         = Carbon::parse($birthdate)->age;
             $educations  = Resume::where('is_deleted', 0)->where('resume_type', 1)->get();
             $experiences = Resume::where('is_deleted', 0)->where('resume_type', 2)->get(); 
+            $services=Services::where( 'is_deleted',0)->get();
 
-            return view('homepage', compact('contact','about','educations','experiences','age','birthdate'));
+            return view('homepage', compact('contact','about','educations','experiences','age','birthdate','services'));
 
         }
     
